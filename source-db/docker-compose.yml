@@ -1,0 +1,23 @@
+version: '3'
+mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - 3306:3306
+    command:
+      --server-id=1
+      --log-bin=/log/mysql-log/bin.log
+      --binlog-format=ROW
+      --binlog-row-image=full
+      --binlog_cache_size=2M
+      --max_binlog_size=512M
+      --expire_logs_days=7
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_USER: bw
+      MYSQL_PASSWORD: bw
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    volumes:
+      - db_data:/var/lib/mysql
