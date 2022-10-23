@@ -12,10 +12,7 @@ services:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci
     environment:
-      MYSQL_USER: bw
-      MYSQL_PASSWORD: bw
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test
     volumes:
       - /mysql:/var/lib/mysql
  
@@ -31,10 +28,7 @@ services:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci
     environment:
-      MYSQL_USER: bw
-      MYSQL_PASSWORD: bw
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test
     volumes:
       - /mysql-sink:/var/lib/mysql    
      
