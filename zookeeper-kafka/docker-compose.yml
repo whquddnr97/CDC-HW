@@ -1,10 +1,12 @@
 services:
   zookeeper:
+    container-name: zookeeper
     image: confluent/zookeeper
     ports:
       - "2181:2181"
       
   kafka:
+    comtainer-name: kafka
     image: confluent/kafka
     depends_on:
       - zookeeper
