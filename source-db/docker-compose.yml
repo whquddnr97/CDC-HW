@@ -19,5 +19,3 @@ services:
             MYSQL_PASSWORD: bw
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: test
-        volumes:
-            - db_data:/var/lib/mysql
